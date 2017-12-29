@@ -1,6 +1,7 @@
 package com.jc6036;
 
 import com.jc6036.PortScanner;
+import com.jc6036.PortScannerTests;
 
 public class Main {
 

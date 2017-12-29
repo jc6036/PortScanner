@@ -12,6 +12,7 @@ public class PortScanner {
     // Primary scan type to run with
     private ScanType ScanMode = RANGE_SCAN;
 
+    // Literal min and max ports
     private static final int MINIMUM_PORT = 0;
     private static final int MAXIMUM_PORT = 65535;
 
@@ -61,5 +62,75 @@ public class PortScanner {
         this(SINGLE_SCAN, nTargetPort, 0, 0, sTargetAddress);
     }
 
-    // No constructor for ALL_SCAN option. User must run that explicitly.
+    // No default constructor for ALL_SCAN option. User must run that explicitly.
+
+    /*
+    * Getters and Setters ahead. Beware traveler
+    * */
+    public ScanType GetScanType()
+    {
+        return this.ScanMode;
+    }
+    public void SetScanType(ScanType ScanMode)
+    {
+        this.ScanMode = ScanMode;
+    }
+
+    public int GetTargetPort()
+    {
+        return this.nTargetPort;
+    }
+    public void SetTargetPort(int nTargetPort)
+    {
+        if(nTargetPort <= MAXIMUM_PORT && nTargetPort >= MINIMUM_PORT)
+        {
+            this.nTargetPort = nTargetPort;
+        }
+        else
+        {
+            System.out.println("Error: SetTargetPort called with a port number too high or too low.");
+        }
+    }
+
+    public int GetStartPort()
+    {
+        return this.nRangeStart;
+    }
+    public void SetStartPort(int nStart)
+    {
+        if(nStart <= MAXIMUM_PORT && nStart >= MINIMUM_PORT)
+        {
+            this.nRangeStart = nStart;
+        }
+        else
+        {
+            System.out.println("Error: SetStartPort called with a port number too high or too low.");
+        }
+    }
+
+    public int GetEndPort()
+    {
+        return this.nRangeEnd;
+    }
+    public void SetEndPort(int nEnd)
+    {
+        if(nEnd <= MAXIMUM_PORT && nEnd >= MINIMUM_PORT)
+        {
+            this.nRangeEnd = nEnd;
+        }
+        else
+        {
+            System.out.println("Error: SetEndPort called with a port number too high or too low.");
+        }
+    }
+
+    public String GetTargetAddress()
+    {
+        return this.sTargetAddress;
+    }
+    public void SetTargetAddress(String sAddress)
+    {
+        // We don't error check this here. When we try to turn this string into an IAddress, we will see if it fails.
+        this.sTargetAddress = sAddress;
+    }
 }
