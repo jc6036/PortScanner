@@ -1,6 +1,7 @@
 package com.jc6036;
 
 import static com.jc6036.ScanType.*;
+import com.jc6036.ScanResult;
 
 public class PortScanner {
     /* Class Vars */
@@ -132,5 +133,54 @@ public class PortScanner {
     {
         // We don't error check this here. When we try to turn this string into an IAddress, we will see if it fails.
         this.sTargetAddress = sAddress;
+    }
+
+
+    /*
+    *   Scanning Operations Below.
+    * */
+
+    public ScanResult Scan()
+    {
+        /*
+        *   The primary scan method. Takes the configured class state and scans ports. This class returns the
+        *   result as a ScanResult class. I've chosen to return another class as I believe that it can hold
+        *   a more informative set of data than if I were to return an array or simple data type. Using
+        *   ScanResult will allow me to expand the dataset I can return in the future, even if ScanResult
+        *   starts out with only one or two types in it.
+        *
+        *   Takes: Nothing
+        *
+        *   Returns: a configured ScanResult object
+        *
+        *   State Used:
+        *   ScanMode
+        *   nTargetPort
+        *   sTargetAddress
+        *   nRangeStart
+        *   nRangeEnd
+        * */
+
+
+        ScanResult Result = new ScanResult();
+        return Result;
+    }
+
+    public boolean ScanSinglePort()
+    {
+        /*
+        *   Prototype/Proof of Concept Method
+        *   This method will be removed once I get the base scanner logic working.
+        *
+        *   This method scans a singular port.
+        *
+        *   Returns false if the port is closed, and return true if the port is open
+        *
+        *   Uses sTargetAddress, nTargetPort, and ScanMode to determine the port details.
+        * */
+
+
+
+        return false;
     }
 }
