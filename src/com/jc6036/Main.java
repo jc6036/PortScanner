@@ -13,6 +13,15 @@ public class Main {
         *   The port scanner object will do the scanning of ports and output results.
         * */
 
-        PortScanner Scanner = new PortScanner(500); // Placeholder
+        PortScanner Scanner = new PortScanner(6942); // Placeholder
+        boolean bPortOpen = Scanner.ScanSinglePort();
+        if(bPortOpen)
+        {
+            System.out.println("Port is open!");
+        }
+        else
+        {
+            System.out.println("Port is closed!");
+        }
     }
 }
