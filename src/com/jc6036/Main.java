@@ -1,7 +1,9 @@
 package com.jc6036;
 
 import com.jc6036.PortScanner;
+import com.jc6036.ScanResult;
 import com.jc6036.PortScannerTests;
+import java.util.Map;
 
 public class Main {
 
@@ -13,15 +15,15 @@ public class Main {
         *   The port scanner object will do the scanning of ports and output results.
         * */
 
-        PortScanner Scanner = new PortScanner(6942); // Placeholder
-        boolean bPortOpen = Scanner.ScanSinglePort();
-        if(bPortOpen)
-        {
-            System.out.println("Port is open!");
-        }
-        else
-        {
-            System.out.println("Port is closed!");
-        }
+        PortScanner Scanner = new PortScanner(6942);
+        ScanResult result = Scanner.Scan();
+
+        System.out.println(result.GetAddress());
+
+        Map<Integer, Boolean> results = result.GetPorts();
+
+        String sResult = results.toString();
+
+        System.out.println(sResult);
     }
 }
