@@ -6,12 +6,13 @@ import com.jc6036.ScanResult;
 import java.io.IOException;
 import java.net.*;
 
-public class PortScanner {
+public class PortScanner
+{
     /* Class Vars */
     private int nRangeStart = 0;
     private int nRangeEnd = 0;
     private int nTargetPort = 0;
-    private String sTargetAddress = "127.0.0.1";
+    private String sTargetAddress = "127.0.0.1"; // Note that this can be set to a URL as well
 
     // Primary scan type to run with
     private ScanType ScanMode = RANGE_SCAN;
@@ -191,12 +192,23 @@ public class PortScanner {
 
         ScanResult Result = new ScanResult();
 
-        /* LOGIC */
+        if(ScanMode == SINGLE_SCAN)
+        {
+            Boolean bResult = ScanSinglePort(sTargetAddress, nTargetPort);
+            Result.AddResult(nTargetPort, bResult);
+            Result.SetAddress(sTargetAddress);
+        }
+        else if(ScanMode == RANGE_SCAN)
+        {
+        }
+        else if(ScanMode == ALL_SCAN) // BEWARE THE FORBIDDEN FRUIT
+        {
+        }
 
         return Result;
     }
 
-    public boolean ScanSinglePort()
+    private boolean ScanSinglePort(String sTargetAddress, int nTargetPort)
     {
         /*
         *   Prototype/Proof of Concept Method
@@ -206,15 +218,18 @@ public class PortScanner {
         *
         *   Returns false if the port is closed, and return true if the port is open
         *
-        *   Uses sTargetAddress, nTargetPort, and ScanMode to determine the port details.
+        *   Uses sTargetAddress and nTargetPort to determine the port details.
         * */
 
-        ServerSocket socket = null;
-        DatagramSocket datagramSocket = null;
+        ServerSocket socket = null; // Checking TCP
+        DatagramSocket datagramSocket = null; // Checking UDP
+        InetAddress Address = null; // Target Object
 
         try
         {
-            socket = new ServerSocket(nTargetPort);
+            Address = Inet4Address.getByName(sTargetAddress);
+
+            socket = new ServerSocket(nTargetPort, 2, Address);
             socket.setReuseAddress(true);
             if(socket != null)
             {
@@ -224,11 +239,12 @@ public class PortScanner {
         }
         catch (IOException e)
         {
+            // TODO: Add error handling you DINGUS
         }
 
         try
         {
-            datagramSocket = new DatagramSocket(nTargetPort);
+            datagramSocket = new DatagramSocket(nTargetPort, Address);
             datagramSocket.setReuseAddress(true);
             if(datagramSocket != null)
             {
@@ -238,6 +254,7 @@ public class PortScanner {
         }
         catch (IOException e)
         {
+            // TODO: Add error handling you DINGUS
         }
 
         return false;
