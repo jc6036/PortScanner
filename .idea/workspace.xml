@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cfc24802-bff8-4711-adc3-c5eb29e1bb0f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jc6036/Main.java" afterPath="$PROJECT_DIR$/src/com/jc6036/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jc6036/PortScanner.java" afterPath="$PROJECT_DIR$/src/com/jc6036/PortScanner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jc6036/ScanResult.java" afterPath="$PROJECT_DIR$/src/com/jc6036/ScanResult.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
