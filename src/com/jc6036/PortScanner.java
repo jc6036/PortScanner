@@ -31,17 +31,23 @@ public class PortScanner
         if(nTargetPort < MINIMUM_PORT || nTargetPort > MAXIMUM_PORT)
         {
             nTargetPort = MINIMUM_PORT;
-            System.out.println("Target Port was out of bounds during construction. Set to 0."); // TODO: Replace with real error handling
+            System.out.println("Target Port was out of bounds during construction. Must be higher than 0 and lower than 65535.");
+            System.out.println("Port Given: " + nTargetPort);
+            System.exit(0);
         }
         if(nRangeStart < MINIMUM_PORT || nRangeStart > MAXIMUM_PORT)
         {
             nRangeStart = MINIMUM_PORT;
-            System.out.println("Port Range Start was out of bounds during construction. Set to 0."); // TODO: Replace with real error handling
+            System.out.println("Port Range Start was out of bounds during construction. Must be higher than 0.");
+            System.out.println("Start Port Given: " + nRangeStart);
+            System.exit(0);
         }
         if(nRangeEnd < MINIMUM_PORT || nRangeEnd > MAXIMUM_PORT)
         {
             nRangeEnd = MINIMUM_PORT;
-            System.out.println("Port Range End was out of bounds during construction. Set to 0."); // TODO: Replace with real error handling
+            System.out.println("Port Range End was out of bounds during construction. Must be lower than 65535.");
+            System.out.println("End Port Given: " + nRangeEnd);
+            System.exit(0);
         }
 
         // Invalid Settings
@@ -49,7 +55,10 @@ public class PortScanner
         {
             nRangeStart = MINIMUM_PORT;
             nRangeEnd = MINIMUM_PORT;
-            System.out.println("Port Choices for Range Scan invalid. Both set to 0."); // TODO: Replace with real error handling
+            System.out.println("Port Choices for Range Scan invalid. Start must be higher than 0, end must be lower than 65536.");
+            System.out.println("Start Port Given: " + nRangeStart);
+            System.out.println("End Port Given: " + nRangeEnd);
+            System.exit(0);
         }
 
         this.ScanMode = ScanMode;
@@ -119,6 +128,7 @@ public class PortScanner
         else
         {
             System.out.println("Error: SetTargetPort called with a port number too high or too low.");
+            System.exit(0);
         }
     }
 
@@ -135,6 +145,7 @@ public class PortScanner
         else
         {
             System.out.println("Error: SetStartPort called with a port number too high or too low.");
+            System.exit(0);
         }
     }
 
@@ -151,6 +162,7 @@ public class PortScanner
         else
         {
             System.out.println("Error: SetEndPort called with a port number too high or too low.");
+            System.exit(0);
         }
     }
 
@@ -201,6 +213,9 @@ public class PortScanner
         else if(ScanMode == RANGE_SCAN)
         {
         }
+        else if(ScanMode == MULTI_SCAN)
+        {
+        }
         else if(ScanMode == ALL_SCAN) // BEWARE THE FORBIDDEN FRUIT
         {
         }
@@ -239,7 +254,10 @@ public class PortScanner
         }
         catch (IOException e)
         {
-            // TODO: Add error handling you DINGUS
+            System.out.println("There was an error while establishing a TCP connection to a target port.");
+            System.out.println("Target: " + sTargetAddress + " Port: " + nTargetPort);
+            System.out.println("IOException Error Code: " + e.getMessage());
+            System.exit(0);
         }
 
         try
@@ -254,7 +272,10 @@ public class PortScanner
         }
         catch (IOException e)
         {
-            // TODO: Add error handling you DINGUS
+            System.out.println("There was an error while establishing a UDP connection to a target port.");
+            System.out.println("Target: " + sTargetAddress + " Port: " + nTargetPort);
+            System.out.println("IOException Error Code: " + e.getMessage());
+            System.exit(0);
         }
 
         return false;
