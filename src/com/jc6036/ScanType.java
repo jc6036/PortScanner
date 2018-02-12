@@ -7,5 +7,6 @@ public enum ScanType
     * */
     RANGE_SCAN,
     SINGLE_SCAN,
+    MULTI_SCAN,
     ALL_SCAN
 }
