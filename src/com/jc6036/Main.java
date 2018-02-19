@@ -15,15 +15,36 @@ public class Main {
         *   The port scanner object will do the scanning of ports and output results.
         * */
 
-        PortScanner Scanner = new PortScanner(6942);
-        ScanResult result = Scanner.Scan();
+        RunTests();
+    }
 
-        System.out.println(result.GetAddress());
+    private static void RunTests()
+    {
+        /* Configure Test Parameters Here */
+        /* You will need to manually confirm these results for the test to work right. */
+        int nSingleTarget = 6942;
+        Boolean bSingleResult = true;
 
-        Map<Integer, Boolean> results = result.GetPorts();
 
-        String sResult = results.toString();
+        PortScannerTests tests = new PortScannerTests();
 
-        System.out.println(sResult);
+        if(!tests.BaseConstructorTest())
+        {
+            // Method prints its own message so we should be fine just exiting here
+            System.exit(0);
+        }
+
+        if(!tests.GettersAndSettersTest())
+        {
+            System.exit(0);
+        }
+
+        if(!tests.SingleLocalPortScanTest(nSingleTarget, bSingleResult))
+        {
+            System.exit(0);
+        }
+
+        // BLASTOFF
+        System.out.println("All tests ran correctly!");
     }
 }

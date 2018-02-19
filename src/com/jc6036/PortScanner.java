@@ -254,10 +254,14 @@ public class PortScanner
         }
         catch (IOException e)
         {
-            System.out.println("There was an error while establishing a TCP connection to a target port.");
-            System.out.println("Target: " + sTargetAddress + " Port: " + nTargetPort);
-            System.out.println("IOException Error Code: " + e.getMessage());
-            System.exit(0);
+            //System.out.println("There was an error while establishing a TCP connection to a target port.");
+            //System.out.println("Target: " + sTargetAddress + " Port: " + nTargetPort);
+            //System.out.println("IOException Error Code: " + e.getMessage());
+            //System.exit(0);
+
+            // Hitting an IOException should be excusable. Terminating upon one of these kills the flow of the program.
+            // Maybe it's a smell that part of the design relies on an skipping an exception in the case of a
+            // connection failure?
         }
 
         try
@@ -272,10 +276,12 @@ public class PortScanner
         }
         catch (IOException e)
         {
-            System.out.println("There was an error while establishing a UDP connection to a target port.");
-            System.out.println("Target: " + sTargetAddress + " Port: " + nTargetPort);
-            System.out.println("IOException Error Code: " + e.getMessage());
-            System.exit(0);
+            //System.out.println("There was an error while establishing a UDP connection to a target port.");
+            //System.out.println("Target: " + sTargetAddress + " Port: " + nTargetPort);
+            //System.out.println("IOException Error Code: " + e.getMessage());
+            //System.exit(0);
+
+            // See note above in the TCP exception block.
         }
 
         return false;
