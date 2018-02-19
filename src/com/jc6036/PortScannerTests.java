@@ -126,7 +126,7 @@ public class PortScannerTests {
             return false;
         }
 
-        if(ports.get(nTarget) != bResult)
+        if(ports.get(nTarget) != bResult) // And then confirm the result
         {
             System.out.println("Scan Result failure. Port was not in its expected state as passed by method parameter.");
             return false;
