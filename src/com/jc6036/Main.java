@@ -3,6 +3,7 @@ package com.jc6036;
 import com.jc6036.PortScanner;
 import com.jc6036.ScanResult;
 import com.jc6036.PortScannerTests;
+import com.jc6036.InputParser;
 import java.util.Map;
 
 public class Main {
@@ -14,8 +15,9 @@ public class Main {
         *
         *   The port scanner object will do the scanning of ports and output results.
         * */
+        PortScanner Scanner = InputParser.ParseInput(args);
 
-        RunTests();
+        Scanner.Scan();
     }
 
     private static void RunTests()
