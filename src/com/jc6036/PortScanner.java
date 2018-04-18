@@ -20,6 +20,7 @@ public class PortScanner
     private static final int MINIMUM_PORT = 0;
     private static final int MAXIMUM_PORT = 65535;
 
+    // <editor-fold desc="Constructors">
     // I think I should refactor this into a static factory method at some point if I have to add any more params
     public PortScanner(ScanType ScanMode, int nTargetPort, int nRangeStart, int nRangeEnd, String sTargetAddress)
     {
@@ -100,11 +101,14 @@ public class PortScanner
         this(SINGLE_SCAN, nTargetPort, 0, 0, sTargetAddress);
     }
 
-    // No default constructor for ALL_SCAN option. User must run that explicitly.
+    // Yes, there is no default constructor that does ALL_SCAN, that must be set explicitly.
+    // </editor-fold>
+
 
     /*
     * Getters and Setters ahead. Beware traveler
     * */
+    // <editor-fold desc="Getters And Setters">
     public ScanType GetScanType()
     {
         return this.ScanMode;
@@ -174,12 +178,12 @@ public class PortScanner
         // We don't error check this here. When we try to turn this string into an IAddress, we will see if it fails.
         this.sTargetAddress = sAddress;
     }
+    //</editor-fold>
 
 
     /*
     *   Scanning Operations Below.
     * */
-
     public ScanResult Scan()
     {
         /*
@@ -222,6 +226,7 @@ public class PortScanner
         return Result;
     }
 
+
     private boolean ScanSinglePort(String sTargetAddress, int nTargetPort)
     {
         /*
@@ -261,6 +266,8 @@ public class PortScanner
             // Hitting an IOException should be excusable. Terminating upon one of these kills the flow of the program.
             // Maybe it's a smell that part of the design relies on an skipping an exception in the case of a
             // connection failure?
+            // Definitely a smell, but it's the way the Java connection utilities work. A refused connection
+            // inidcating a closed port throws an exception, chalk it up to java weirdness.
         }
 
         try
