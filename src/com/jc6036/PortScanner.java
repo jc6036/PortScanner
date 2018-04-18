@@ -1,7 +1,6 @@
 package com.jc6036;
 
 import static com.jc6036.ScanType.*;
-import com.jc6036.ScanResult;
 
 import java.io.IOException;
 import java.net.*;

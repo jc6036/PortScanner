@@ -1,8 +1,5 @@
 package com.jc6036;
 
-import com.jc6036.PortScanner;
-import com.jc6036.ScanType.*;
-
 import static com.jc6036.ScanType.*;
 
 public class InputParser
@@ -82,12 +79,16 @@ public class InputParser
         {
             case "single":
                 Mode = SINGLE_SCAN;
+                break;
             case "range":
                 Mode = RANGE_SCAN;
+                break;
             case "all":
                 Mode = ALL_SCAN;
+                break;
             case "multi":
                 Mode =  MULTI_SCAN;
+                break;
             default:
                 System.out.println("Mode Parameter Not Recognized: " + sParam);
                 System.exit(0);

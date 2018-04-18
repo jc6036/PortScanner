@@ -1,8 +1,5 @@
 package com.jc6036;
 
-import com.jc6036.PortScanner;
-import com.jc6036.ScanResult;
-
 import static com.jc6036.ScanType.*;
 
 import java.util.Map;
