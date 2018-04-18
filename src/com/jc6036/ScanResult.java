@@ -1,5 +1,6 @@
 package com.jc6036;
 
+import java.util.Iterator;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -50,5 +51,33 @@ public class ScanResult
     public void ClearResults()
     {
         mPorts.clear();
+    }
+
+
+    /* Output Methods Print Contents to Console */
+    public void ResultsToConsole()
+    {
+        System.out.println("Scan Results");
+
+        System.out.println("Target Address: " + sTargetAddress);
+
+        Iterator it = mPorts.entrySet().iterator();
+
+        while(it.hasNext())
+        {
+            Map.Entry<Integer, Boolean> entry = (Map.Entry<Integer, Boolean>)it.next();
+
+            String status;
+            if(entry.getValue())
+            {
+                status = "OPEN";
+            }
+            else
+            {
+                status = "CLOSED";
+            }
+
+            System.out.println("Port: " + Integer.toString(entry.getKey()) + " | " + status);
+        }
     }
 }

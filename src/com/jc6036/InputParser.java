@@ -29,7 +29,6 @@ public class InputParser
         {
             switch(sParams[i])
             {
-                /* TODO: Will need to add input parsing for multiple ports eventually */
                 // Mode
                 case "-m":
                     Scanner.SetScanType(GetScanModeFromString(sParams[i + 1]));

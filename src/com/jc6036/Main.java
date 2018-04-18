@@ -12,7 +12,9 @@ public class Main {
 
         PortScanner Scanner = InputParser.ParseInput(args);
 
-        Scanner.Scan();
+        ScanResult Result = Scanner.Scan();
+
+        Result.ResultsToConsole();
     }
 
     private static void RunTests()
