@@ -46,14 +46,20 @@ public class InputParser
                     Scanner.SetTargetAddress(sParams[i + 1]);
                     i++;
                     break;
-                case "-rs":
+                case "-r":
                     Scanner.SetStartPort(GetPortFromString(sParams[i + 1]));
-                    i++;
+                    Scanner.SetEndPort(GetPortFromString(sParams[i + 2]));
+                    i += 2;
                     break;
-                case "-rn":
-                    Scanner.SetEndPort(GetPortFromString(sParams[i + 1]));
-                    i++;
-                    break;
+                case "help":
+                    System.out.println("Parameters");
+                    System.out.println("Mode: -m [single, range, multi, all]");
+                    System.out.println("Target Port: -tp [port number ]");
+                    System.out.println("Target Address: -ta [address]");
+                    System.out.println("Port Range: -r [port number, port number]");
+                    System.out.println("Example, Scan Range of Ports at Target Address");
+                    System.out.println("java PortScanner -m range -ta 192.0.1.17 -r 4000 5000");
+                    System.exit(0);
                 default:
                     System.out.println("Command Not Recognized: " + sParams[i]);
                     System.exit(0);
