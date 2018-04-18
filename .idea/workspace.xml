@@ -9,8 +9,7 @@
     <list default="true" id="cfc24802-bff8-4711-adc3-c5eb29e1bb0f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jc6036/InputParser.java" afterPath="$PROJECT_DIR$/src/com/jc6036/InputParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jc6036/Main.java" afterPath="$PROJECT_DIR$/src/com/jc6036/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jc6036/ScanResult.java" afterPath="$PROJECT_DIR$/src/com/jc6036/ScanResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jc6036/PortScanner.java" afterPath="$PROJECT_DIR$/src/com/jc6036/PortScanner.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,29 +21,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jc6036/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+            <state relative-caret-position="26">
+              <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PortScanner.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PortScanner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/jc6036/PortScanner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="184" column="34" lean-forward="false" selection-start-line="184" selection-start-column="34" selection-end-line="184" selection-end-column="34" />
+            <state relative-caret-position="-546">
+              <caret line="228" column="0" lean-forward="true" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
                 <element signature="e#3693#3736#0" expanded="false" />
-                <element signature="e#3864#3865#0" expanded="true" />
-                <element signature="e#3904#3905#0" expanded="true" />
-                <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-                <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -53,8 +48,8 @@
       <file leaf-file-name="InputParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jc6036/InputParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+            <state relative-caret-position="403">
+              <caret line="37" column="77" lean-forward="true" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -63,8 +58,8 @@
       <file leaf-file-name="ScanResult.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jc6036/ScanResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="81" column="5" lean-forward="false" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+            <state relative-caret-position="431">
+              <caret line="77" column="13" lean-forward="true" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,7 +80,7 @@
       <file leaf-file-name="PortScannerTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jc6036/PortScannerTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
+            <state relative-caret-position="1599">
               <caret line="125" column="72" lean-forward="false" selection-start-line="125" selection-start-column="72" selection-end-line="125" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -119,10 +114,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/com/jc6036/ScanType.java" />
         <option value="$PROJECT_DIR$/src/com/jc6036/PortScannerTests.java" />
-        <option value="$PROJECT_DIR$/src/com/jc6036/PortScanner.java" />
-        <option value="$PROJECT_DIR$/src/com/jc6036/InputParser.java" />
         <option value="$PROJECT_DIR$/src/com/jc6036/Main.java" />
         <option value="$PROJECT_DIR$/src/com/jc6036/ScanResult.java" />
+        <option value="$PROJECT_DIR$/src/com/jc6036/InputParser.java" />
+        <option value="$PROJECT_DIR$/src/com/jc6036/PortScanner.java" />
       </list>
     </option>
   </component>
@@ -146,8 +141,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -172,6 +165,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,7 +199,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="com.jc6036.Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-tp 6942 -m single" />
+      <option name="PROGRAM_PARAMETERS" value="-m range -r 1000 10000 -ta 162.155.13.242" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -264,8 +259,8 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32810047" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32810047" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -273,8 +268,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -316,7 +311,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -329,10 +324,6 @@
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -409,10 +400,6 @@
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -461,10 +448,6 @@
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -485,10 +468,6 @@
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -565,10 +544,6 @@
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -607,10 +582,6 @@
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -649,10 +620,6 @@
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -665,10 +632,6 @@
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -713,10 +676,6 @@
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -745,10 +704,6 @@
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -769,10 +724,6 @@
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -800,28 +751,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jc6036/InputParser.java">
+    <entry file="file://$PROJECT_DIR$/src/com/jc6036/PortScannerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jc6036/ScanResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="81" column="5" lean-forward="false" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+        <state relative-caret-position="1599">
+          <caret line="125" column="72" lean-forward="false" selection-start-line="125" selection-start-column="72" selection-end-line="125" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jc6036/PortScannerTests.java">
+    <entry file="file://$PROJECT_DIR$/src/com/jc6036/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="125" column="72" lean-forward="false" selection-start-line="125" selection-start-column="72" selection-end-line="125" selection-end-column="72" />
+        <state relative-caret-position="26">
+          <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jc6036/InputParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="37" column="77" lean-forward="true" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jc6036/ScanResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="77" column="13" lean-forward="true" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -830,25 +789,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jc6036/PortScanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="184" column="34" lean-forward="false" selection-start-line="184" selection-start-column="34" selection-end-line="184" selection-end-column="34" />
+        <state relative-caret-position="-546">
+          <caret line="228" column="0" lean-forward="true" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#PortScanner#0;n#PortScanner#0" expanded="false" />
             <element signature="e#3693#3736#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="method#Scan#0;class#PortScanner#0" expanded="false" />
-            <element signature="method#ScanSinglePort#0;class#PortScanner#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jc6036/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>

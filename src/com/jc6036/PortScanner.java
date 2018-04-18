@@ -215,12 +215,27 @@ public class PortScanner
         }
         else if(ScanMode == RANGE_SCAN)
         {
+            for(int i = nRangeStart; i < nRangeEnd; i++)
+            {
+                Boolean bResult = ScanSinglePort(sTargetAddress, i);
+                Result.AddResult(i, bResult);
+                Result.SetAddress(sTargetAddress);
+
+
+            }
         }
         else if(ScanMode == MULTI_SCAN)
         {
+
         }
         else if(ScanMode == ALL_SCAN) // BEWARE THE FORBIDDEN FRUIT
         {
+            for(int i = MINIMUM_PORT; i<MAXIMUM_PORT;i++)
+            {
+                Boolean bResult = ScanSinglePort(sTargetAddress, i);
+                Result.AddResult(i, bResult);
+                Result.SetAddress(sTargetAddress);
+            }
         }
 
         return Result;

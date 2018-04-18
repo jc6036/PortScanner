@@ -22,7 +22,7 @@ public class InputParser
         *   the program.
         */
 
-        PortScanner Scanner = new PortScanner(555);
+        PortScanner Scanner = new PortScanner(0);
 
         // For each param string given
         for(int i = 0; i < sParams.length; i++)
