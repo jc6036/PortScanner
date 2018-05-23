@@ -14,7 +14,7 @@ public class Main {
 
         ScanResult Result = Scanner.Scan();
 
-        Result.ResultsToConsole();
+        Result.ToConsole();
     }
 
     private static void RunTests()

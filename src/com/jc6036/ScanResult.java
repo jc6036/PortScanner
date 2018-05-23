@@ -55,7 +55,7 @@ public class ScanResult
 
 
     /* Output Methods Print Contents to Console */
-    public void ResultsToConsole()
+    public void ToConsole()
     {
         System.out.println("Scan Results");
 

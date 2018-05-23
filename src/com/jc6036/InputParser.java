@@ -1,5 +1,8 @@
 package com.jc6036;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.jc6036.ScanType.*;
 
 public class InputParser
@@ -38,6 +41,10 @@ public class InputParser
                     Scanner.SetTargetPort(GetPortFromString(sParams[i + 1]));
                     i++;
                     break;
+                case "-tps":
+                    Scanner.SetPortList(GetPortListFromString(sParams[i+1]));
+                    i++;
+                    break;
                 case "-ta":
                     Scanner.SetTargetAddress(sParams[i + 1]);
                     i++;
@@ -47,14 +54,22 @@ public class InputParser
                     Scanner.SetEndPort(GetPortFromString(sParams[i + 2]));
                     i += 2;
                     break;
+                case "?":
+                case "-?":
+                case "-help":
                 case "help":
                     System.out.println("Parameters");
                     System.out.println("Mode: -m [single, range, multi, all]");
-                    System.out.println("Target Port: -tp [port number ]");
+                    System.out.println("Target Port: -tp [port number]");
                     System.out.println("Target Address: -ta [address]");
                     System.out.println("Port Range: -r [port number, port number]");
+                    System.out.println("Port List: -tps \"[port number, number, number, number]\"");
                     System.out.println("Example, Scan Range of Ports at Target Address");
                     System.out.println("java PortScanner -m range -ta 192.0.1.17 -r 4000 5000");
+                    System.out.println("java PortScanner -m multi -ta 192.0.1.1 -tps \"500 234 1222 4353\"");
+                    System.out.println("-----------------------------------------------------------------");
+                    System.out.println("Single mode scans a single port. Range scans a range of ports, from start to end.");
+                    System.out.println("Multi mode scans a given list of ports. All scans ALL PORTS. USE WITH CARE.");
                     System.exit(0);
                 default:
                     System.out.println("Command Not Recognized: " + sParams[i]);
@@ -108,6 +123,30 @@ public class InputParser
         {
             System.out.println("Target Port Parameter is Not a Number: " + sParam);
             System.exit(0);
+        }
+
+        return nRet;
+    }
+
+    private static List<Integer> GetPortListFromString(String sParams)
+    {
+        List<Integer> nRet = new ArrayList<Integer>();
+
+        sParams.replace("\"", "");
+        String sSplitParams[] = sParams.split(" "); // REGEX: Matches of 1 or more digits.
+
+        for(int i = 0; i < sSplitParams.length; i++)
+        {
+            try
+            {
+                sSplitParams[i].trim();
+                nRet.add(Integer.parseInt(sSplitParams[i]));
+            }
+            catch (NumberFormatException e)
+            {
+                System.out.println("Port in Port List Parameter is Not a Number: " + sSplitParams[i]);
+                System.exit(0);
+            }
         }
 
         return nRet;

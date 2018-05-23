@@ -3,7 +3,11 @@ package com.jc6036;
 import static com.jc6036.ScanType.*;
 
 import java.io.IOException;
-import java.net.*;
+import java.net.Inet4Address;
+import java.net.DatagramSocket;
+import java.net.ServerSocket;
+import java.net.InetAddress;
+import java.util.List;
 
 public class PortScanner
 {
@@ -12,6 +16,8 @@ public class PortScanner
     private int nRangeEnd = 0;
     private int nTargetPort = 0;
     private String sTargetAddress = "127.0.0.1"; // Note that this can be set to a URL as well
+
+    private List<Integer> nPortList;
 
     // Primary scan type to run with
     private ScanType ScanMode = RANGE_SCAN;
@@ -178,6 +184,12 @@ public class PortScanner
         // We don't error check this here. When we try to turn this string into an IAddress, we will see if it fails.
         this.sTargetAddress = sAddress;
     }
+
+    public List<Integer> GetPortList() {return this.nPortList;}
+    public void SetPortList(List<Integer> nPortList)
+    {
+        this.nPortList = nPortList;
+    }
     //</editor-fold>
 
 
@@ -215,26 +227,33 @@ public class PortScanner
         }
         else if(ScanMode == RANGE_SCAN)
         {
+            Result.SetAddress(sTargetAddress);
+
             for(int i = nRangeStart; i < nRangeEnd; i++)
             {
                 Boolean bResult = ScanSinglePort(sTargetAddress, i);
                 Result.AddResult(i, bResult);
-                Result.SetAddress(sTargetAddress);
-
-
             }
         }
         else if(ScanMode == MULTI_SCAN)
         {
+            Result.SetAddress(sTargetAddress);
 
+            for(int i = 0; i < nPortList.size(); i++)
+            {
+                int nPort = nPortList.get(i);
+                Boolean bResult = ScanSinglePort(sTargetAddress, nPort);
+                Result.AddResult(nPort, bResult);
+            }
         }
         else if(ScanMode == ALL_SCAN) // BEWARE THE FORBIDDEN FRUIT
         {
+            Result.SetAddress(sTargetAddress);
+
             for(int i = MINIMUM_PORT; i<MAXIMUM_PORT;i++)
             {
                 Boolean bResult = ScanSinglePort(sTargetAddress, i);
                 Result.AddResult(i, bResult);
-                Result.SetAddress(sTargetAddress);
             }
         }
 
